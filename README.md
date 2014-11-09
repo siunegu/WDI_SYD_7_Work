@@ -49,6 +49,6 @@ git push origin master
 
 1. Make your local GA folder: `mkdir ga_wdi`
 2. Create your projects folder: `cd ga_wdi` then `mkdir projects`
-3. Clone the class repo: `git clone git@github.com:FluffyJack/WDI_SYD_7.git`
-4. Fork this repo on GitHub: [https://github.com/FluffyJack/WDI_SYD_7_Work](https://github.com/FluffyJack/WDI_SYD_7_Work)
+3. Clone the class repo: `git clone git@github.com:ga-students/WDI_SYD_7.git`
+4. Fork this repo on GitHub: [https://github.com/ga-students/WDI_SYD_7_Work](https://github.com/ga-students/WDI_SYD_7_Work)
 5. Clone your fork of the repo into the `ga_wdi` folder you made
