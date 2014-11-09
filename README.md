@@ -15,7 +15,7 @@
 - Pull from origin into your development branch
   - In this step, you are merging your development branch into your master branch
 - Push your master to your origin
-- Make a pull request with a title starting with `hw_w01_submission`
+- Make a pull request with a title starting with `hw_w01_d01_submission`
 
 ---
 
@@ -41,6 +41,6 @@ git push origin master
 
 ######Make a pull request
 - Go to your own github account and make your pull request
-- You MUST title your pull request starting with `hw_w01_submission`
-  - For example: "hw_w01_submission Complete Calculator HW"
+- You MUST title your pull request starting with `hw_w01_d01_submission`
+  - For example: "hw_w01_d01_submission Complete Calculator HW"
 - You MUST inlucude comments on your successes and challenges
