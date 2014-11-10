@@ -1,7 +1,3 @@
-name = "jack"
-
-age = (name == "jack" ? 21: "Unknown")
-
 puts "What is your age?"
 age = gets.to_i
 if age < 21
