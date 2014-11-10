@@ -49,3 +49,10 @@
 #####File
 
 [https://gist.github.com/FluffyJack/3522746c15f15246caa1](https://gist.github.com/FluffyJack/3522746c15f15246caa1)
+
+## Bonus homework
+
+1. The challenge: https://gist.github.com/FluffyJack/3c0a6b11809d86414c1a
+2. Try GitHub: https://try.github.io/levels/1/challenges/1
+3. Code School: https://www.codeschool.com/courses/git-real
+4. Atlassian Getting Started Guide: https://www.atlassian.com/git/tutorials/setting-up-a-repository
