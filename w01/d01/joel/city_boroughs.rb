@@ -2,7 +2,6 @@ puts "Welcome to the annual meeting of the Australian Street Gangs.\n"
 puts "To place you in the appropiate gang we'll \n need to know what 'hood you claim."
 puts "Are you from north, west, east, or south Sydney?"
 gang = gets.strip.downcase
-puts "You're from the #{gang}"
 
 if gang == "north"
 	puts "\nAhh... You're a Norteno`!! You're officially a member of the bloods!"
