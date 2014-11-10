@@ -1,14 +1,17 @@
 puts "What borough do you live in?"
 borough = gets.strip.downcase
 
-if borough == "brooklyn"
+case borough
+when "brooklyn"
 	puts "Buck! Buck! Buck!"
-elsif borough == "manhattan"
+when "manhattan"
 	puts "How now brown cow."
-elsif borough == "queens"
+when "queens"
 	puts "Nice one."
-elsif borough == "harlem"
+when "harlem"
 	puts "Righto."
-elsif borough == "the bronx"
+when "the bronx"
 	puts "Yankee Doodle do."
+else
+	puts "That borough doesn\'t exist amigo."
 end
