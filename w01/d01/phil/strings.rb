@@ -1,3 +1,5 @@
+# String test
+
 puts "What is your first name?"
 first = gets.chomp
 puts "your first name is #{first}"
