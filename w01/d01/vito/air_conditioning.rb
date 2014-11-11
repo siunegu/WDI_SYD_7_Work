@@ -17,4 +17,4 @@ elsif air_con == "nf" && current_temp > ideal_temp
 	puts "Fix the AC now! It's hot!"
 else air_con == "nf" && current_temp < ideal_temp
 	puts "Fix the AC whenever you have the chance... It's cool..."
-end	
+end
