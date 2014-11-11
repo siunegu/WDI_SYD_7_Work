@@ -1,12 +1,14 @@
 require 'rainbow'
+require 'rainbow/ext/string'
+
 
 # puts Rainbow("this is red").red
  
-# # A user should be given a menu of operations
-# # A user should be able to choose from the menu
+# A user should be given a menu of operations
+# A user should be able to choose from the menu
 def menu
     puts Rainbow("calc").red
-    puts Rainbow("(b)asic, (a)dvanced, (q)uit").green
+    puts Rainbow("(b)asic, (a)dvanced, (t)rig, t(e)mperature (q)uit").green
     function_type = gets.chomp.downcase          
 end
  
@@ -14,7 +16,7 @@ end
 # A user should be able to enter numbers to perform the operation on
 # A user should be shown the result
 def basic_calc
-  puts "(a)dd, (s)ubtract, (m)ultiply, (d)ivide"
+  puts Rainbow("(a)dd, (s)ubtract, (m)ultiply, (d)ivide").yellow.inverse
   arithmetic_type = gets.chomp.downcase
 
     case arithmetic_type
@@ -56,7 +58,7 @@ end
 
  
 def advanced_calc
-    puts "(p)ower, (s)qrt: "
+    puts Rainbow("(p)ower, (s)qrt: ").blue.inverse
     arithmetic_type = gets.chomp.downcase
     case 
         when 'p' 
@@ -73,94 +75,52 @@ def advanced_calc
         puts result
     end
 end
+
+def trig_calc
+    puts Rainbow("(s)in, (c)os: ").green.inverse
+    arithmetic_type = gets.chomp.downcase
+    response_1 = gets.strip.to_f 
+    puts "enter your radians:"
+    case 
+        when 's' 
+        puts Math.sin(response_1)
+        when 'c' 
+        puts Math.cos(response_1)        
+    end
+end
  
+
+def temp_calc
+    puts Rainbow("(c)elcius, (f)arenheit: ").red.inverse
+    temp_type = gets.chomp.downcase
+     
+
+    case temp_type
+        when 'c' 
+        puts "enter the temp in degrees celcius:"
+        temp = gets.strip.to_f
+        farenheit = temp*1.8+32
+        puts puts "the temp in farenheit is #{farenheit}" 
+        when 'f' 
+        temp = gets.strip.to_f
+        celcius = (temp-32)*5/9
+        puts "enter the temp in degrees farenheit:"
+        puts "the temp in celcius is #{celcius}"
+    end
+end
  
 response = menu
- 
-# # This process should continue until the user selects a quit option from the menu
+
+# This process should continue until the user selects a quit option from the menu
 while response != 'q'
     if response == 'b'
         basic_calc
     elsif response == 'a'
         advanced_calc
+    elsif response == 't'
+        trig_calc
+    elsif response == 'e'
+        temp_calc
     end
     response = menu
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # require 'rainbow'
-
-# # puts Rainbow("this is red").red
- 
-# # # A user should be given a menu of operations
-# # # A user should be able to choose from the menu
-# # def menu
-  
-# # # end
- 
- 
-# # A user should be able to enter numbers to perform the operation on
-# # A user should be shown the result
-# def basic_calc
-#   puts "(a)dd, (s)ubtract, (m)ultiply, (d)ivide:"
-#   arithmetic_type = gets.chomp.downcase
-
-#         puts "whats your first number?"
-#         response_1 = gets.strip.to_f 
-#         puts "whats your second number?"
-#         response_2 = gets.strip.to_f
-
-#     case arithmetic_type
-  
-#     when 'a'
-#     operator :+
-#     when 's'
-#     operator :-
-#     when 'm'
-#     operator = "*"
-#     when 'd'
-#     operator = "/"
-# end
-#     result = response_1 operator response_2
-#     puts "#{response_1} #{operator} #{response_2} = #{result}"
-
-# end
-# basic_calc
- 
-# # # def advanced_calc
-# # #   print "(p)ower, (s)qrt: "
- 
-# # # end
- 
- 
-# # # response = menu
- 
-# # # # This process should continue until the user selects a quit option from the menu
-# # # while response != 'q'
- 
-# # #   response = menu
-# # # end
-
