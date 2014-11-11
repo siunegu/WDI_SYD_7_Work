@@ -52,7 +52,7 @@ def basic_calc
 end
  
 def advanced_calc
-  print Rainbow("\n(p)ower, (s)qrt, (t)emperature\n").magenta
+  print Rainbow("\n(d)istance, (p)ower, (s)qrt, (t)emperature\n").magenta
   adv_choice = gets.chomp.downcase
   case adv_choice[0]
   when "p"
@@ -65,11 +65,88 @@ def advanced_calc
   	print "\nChoose a number to find the square root of: "
   	first_number = gets.to_i
   	print "\nThe Square Root of #{first_number} is: ", Math.sqrt(first_number), "\n"
+  when "t"
+  	temp_conv
+  when "d"
+  	distance_conv
   else
   	puts Rainbow("You're doing it wrong".upcase).red
   end
   gets
  	
+end
+
+def temp_conv
+	puts "What unit do you want to start from? (C)elcius (F)ahrenheit (K)Kelvin"
+	temp_type_one = gets.chomp.upcase
+	print "And what temperature? "
+	temp_one = gets.chomp.to_f
+	puts "\nWhat unit would you like to convert to? (C)elcius (F)ahrenheit (K)elvin"
+	temp_type_two = gets.chomp.upcase
+
+	case temp_type_one[0]
+	when "C"
+		if temp_type_two[0] == "C"
+			puts "#{temp_one} #{temp_type_two[0]} is #{temp_one} #{temp_type_one}.\n\tOr had you forgotten?"
+		elsif temp_type_two[0] == "F"
+			print "#{temp_one} #{temp_type_one} in Fahrenheit is: ", temp_one * 9/5 + 32, "\n"
+		elsif temp_type_two[0] == "K"
+			print "#{temp_one} #{temp_type_one} in Kelvin is: ", temp_one + 273.15, "\n"
+		else
+			print Rainbow("You've done something you weren't supposed to.".upcase).red
+		end
+	when "F"
+		if temp_type_two[0] == "C"
+			print "#{temp_one} #{temp_type_two} in Celcius is: ", 5 / 9 * (temp_one - 32), "\n"
+		elsif temp_type_two[0] == "F"
+			print "#{temp_one} #{temp_type_two[0]} is #{temp_one} #{temp_type_one}.\n\tOr had you forgotten?"
+		elsif temp_type_two[0] == "K"
+			print "#{temp_one} #{temp_type_one} in Kelvin is: ", (temp_one - 32) * 5 / 9 + 273.15, "\n"
+		else
+			print Rainbow("You've done something you weren't supposed to.".upcase).red
+		end
+	when "K"
+		if temp_type_two[0] == "C"
+			print "#{temp_one} #{temp_type_two} in Celcius is: ", temp_one - 273.15, "\n"
+		elsif temp_type_two[0] == "F"
+			print "#{temp_one} #{temp_type_two} in Celcius is: ", temp_one - 273.15 * 1.8 + 32, "\n"
+		elsif temp_type_two[0] == "K"
+			print "#{temp_one} #{temp_type_two[0]} is #{temp_one} #{temp_type_one}.\n\tOr had you forgotten?"
+		else
+			print Rainbow("You've done something you weren't supposed to.".upcase).red
+		end
+	end
+end
+
+def distance_conv
+	print "\nWhich unit do you want to convert from: (K)ilometers or (M)iles: "
+	dist_type_one = gets.chomp.upcase
+	print "\nHow many? "
+	distance = gets.chomp.to_f
+	print "\nWhich unit do you want to convert to: (K)ilometers or (M)iles: "
+	dist_type_two = gets.chomp.upcase
+	case dist_type_one[0]
+	when "K"
+		if dist_type_two[0] == "K" 
+			print "\n#{distance} #{dist_type_one[0]} doesn't change.\n"
+		elsif dist_type_two[0] == "M"
+			converted = distance * 0.6
+			print "\n#{distance} #{dist_type_one[0]} is #{converted} miles.\n"
+		else
+				puts Rainbow("You're doing it wrong".upcase).red
+		end
+	when "M"
+		if dist_type_two[0] == "K" 
+			converted = distance / 0.6
+			print "\n#{distance} #{dist_type_one[0]} is #{converted} kilometers.\n"
+		elsif dist_type_two[0] == "M"
+			print "\n#{distance} #{dist_type_one[0]} doesn't change.\n"
+		else
+			puts Rainbow("You're doing it wrong".upcase).red
+		end
+	else
+			puts Rainbow("You're not entering a valid choice".upcase).red	
+  end
 end
  
  
