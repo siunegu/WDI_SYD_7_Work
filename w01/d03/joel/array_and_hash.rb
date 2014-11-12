@@ -63,11 +63,19 @@ users["Jonathan"][:twitter]
 
 # to add the number 7 to Erik's favorite numbers 
 users["Erik"][:favorite_numbers].push(7)
+<<<<<<< HEAD
 #puts users["Erik"][:favorite_numbers]
 
 #to add myself to the hash
 users.merge!("Joel" => {})
 #puts users["Joel"]
+=======
+
+
+#to add myself to the hash
+users.merge!("Joel" => {})
+
+>>>>>>> 3c083aa55008438d4a47eb3c5bd7697fcffeef31
 
 #to return the array of Erik's favorite numbers
 #puts users["Erik"][:favorite_numbers]
@@ -77,5 +85,25 @@ users["Erik"][:favorite_numbers].to_a
 users["Erik"][:favorite_numbers].sort
 puts users["Erik"][:favorite_numbers][0]
 
+<<<<<<< HEAD
 #to return an array of Anna's favorite numbers that are also even
 users["Anil"][:favorite_numbers].sort
+=======
+#to return an array of Anil's favorite numbers that are also even
+users["Anil"][:favorite_numbers].select {|x| x.even?}
+
+
+#to return an array of favorite numbers common for all users
+
+
+#to return an array containing all users favorite numbers, sorted, and excluding duplicates
+
+
+
+
+#Notes from just after lunch
+people.each do |person|
+  puts person[:name]
+  puts person[:age]
+end
+>>>>>>> 3c083aa55008438d4a47eb3c5bd7697fcffeef31

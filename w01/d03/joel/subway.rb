@@ -94,7 +94,11 @@ end
 
 def determine_stops
   changes = 0
+<<<<<<< HEAD
   print changes
+=======
+# print changes
+>>>>>>> 3c083aa55008438d4a47eb3c5bd7697fcffeef31
   subway_lines = {
   :n_line => ["nTS", "n34th", "n28th", "n23rd", "nUS", "n8th"],
   :l_line => ["l8th", "l6th", "lUS", "l3rd", "l1st"],
