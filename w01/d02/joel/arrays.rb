@@ -33,22 +33,13 @@
 
 # 0.step(100, 10).to_a
 # 	# steps up from 0 to 100 in increments of 10
-<<<<<<< HEAD
 what_borrough = ["glebe" , "newtown" , "surry hills" , "cbd"]
 
 def what_borrough(suburb)
     [“bondi” , “newtown”, “surry hills”].include?(suburb)
 	puts “are you a hipster?”
 end
-=======
 
-#what_borrough = ["glebe" , "newtown" , "surry hills" , "cbd"]
-
-#def what_borrough(suburb)
-#    [“bondi” , “newtown”, “surry hills”].include?(suburb)
-#	puts “are you a hipster?”
-#end
->>>>>>> 3c083aa55008438d4a47eb3c5bd7697fcffeef31
 
 what_borrough(gets.chomp)
 
