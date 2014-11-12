@@ -13,3 +13,5 @@ puts "#{name}'s age is #{age}"
 
 puts people.keys
 puts people.values
+
+

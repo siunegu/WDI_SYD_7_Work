@@ -1,8 +1,21 @@
-jack = {
-  "name" => "Jack Watson-Hamblin",
-  "age" => 21,
-  42 => "fake street"
-}
+# jack = {
+#   "name" => "Jack Watson-Hamblin",
+#   "age" => 21,
+#   42 => "fake street"
+# }
 
-puts jack[42]
-puts jack["age"]
+# puts jack[42]
+# puts jack["age"]
+
+speed = :fast
+
+if speed = :fast
+  puts "SLOW DOWN"
+elsif speed == :medium
+  puts "Slow and steady wins the race!"
+else speed == :slow
+  puts "Speed up... You're going to lose the race!"
+end
+
+
+  
