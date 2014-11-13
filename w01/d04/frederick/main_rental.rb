@@ -1,67 +1,6 @@
 require "pry"
 
-class Building
-	attr_accessor :address, :style, :has_doorman, :is_walkup, :num_floors, :apartments
-
-	def initialize(address, style, has_doorman, is_walkup, num_floors, apartments)
-		self.address = address
-		self.style = style
-		self.has_doorman = has_doorman
-		self.is_walkup = is_walkup
-		self.num_floors = num_floors
-		self.apartments = apartments
-	end
-
-	def building_details
-		puts "Address: #{self.address}"
-		puts "Style: #{self.style}"
-		puts "Doorman: #{self.has_doorman}"
-		puts "Walkup: #{self.is_walkup}"
-		puts "No. of floors: #{self.num_floors}"
-		puts "Apartments: #{self.apartments}"
-	end
-
-end
-
-class Apartment < Building
-	attr_accessor :price, :is_available, :sqft, :num_beds, :num_baths, :renters
-
-	def initialize(price, is_available, sqft, num_beds, num_baths, renters = nil)
-		self.price = price
-		self.is_available = is_available
-		self.sqft = sqft
-		self.num_beds = num_beds
-		self.num_baths = num_baths
-		self.renters = renters
-	end
-
-	def apartment_details
-		puts "Price: #{self.address}"
-		puts "Availability: #{self.is_available}"
-		puts "Square feet: #{self.sqft}"
-		puts "No. of bedrooms: #{self.num_beds}"
-		puts "No. of bathrooms: #{self.num_baths}"
-		puts "Renters: #{self.renters}"
-	end
-end
-
-class Person < Apartment
-	attr_accessor :name, :age, :gender, :apartment
-
-	def initialize(name, age, gender, apartment)
-		self.name = name
-		self.age = age
-		self.gender = gender
-		self.apartment = apartment
-	end
-
-	def person_details
-		puts "Name: #{self.name}"
-		puts "Age: #{self.age}"
-		puts "Gender: #{self.gender}"
-		puts "Apartment: #{self.apartment}"
-	end
-end
+require_relative "person"
 
 
 building_1 = Building.new("123 Fake Street", "Low-class", "Yes", "Yes", 3, [apartment_a, apartment_b])
@@ -99,7 +38,7 @@ person = [person_1, person_2, person_3, person_4, person_5,
 
 		apartments.each do |apartment|
 		if apartment.is_available == "Yes"
-			puts apartment
+			puts #{apartment.class}
 		end
 			puts "Doesn't work"
 		end
