@@ -33,6 +33,7 @@
 
 # 0.step(100, 10).to_a
 # 	# steps up from 0 to 100 in increments of 10
+<<<<<<< HEAD
 what_borrough = ["glebe" , "newtown" , "surry hills" , "cbd"]
 
 def what_borrough(suburb)
