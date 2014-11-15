@@ -1,10 +1,20 @@
+require_relative "shelter"
+require_relative "menu"
 
-
-class Animal
+class Animal < Shelter
 
   attr_accessor :name, :age, :gender, :species, :toys
  
-  def initialize(name, age, gender, species)
+  def initialize(name, age, gender, species, toys)
+
+  self.name = name
+  self.age = age
+  self.gender = gender
+  self.species = species
+  self.toys = toys
+
+  # self.add_animal_to_shelter
+  add_animal_to_shelter(name, age, gender, species, toys)
  
   end
  
@@ -20,4 +30,10 @@ class Animal
 
   end
 
+
+
 end
+
+
+
+# puts Animal

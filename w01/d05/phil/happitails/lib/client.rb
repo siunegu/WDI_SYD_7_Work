@@ -1,13 +1,16 @@
 
 
-class Shelter
+class Client
 
-  attr_accessor :clients, :animals,
+  attr_accessor :name, :num_children, :age, :number_of_pets
  
-  def initialize(clients, animals)
+  def initialize(name, num_children, age, number_of_pets)
   
-  self.clients = clients
-  self.animals = animals
+  self.name = name
+  self.num_children = num_children
+  self.age = age
+  self.number_of_pets = number_of_pets
+
 
   end
 
