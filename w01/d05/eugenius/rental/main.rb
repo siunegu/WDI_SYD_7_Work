@@ -55,9 +55,16 @@ def list_buildings(all_buildings)
     is_available_values = single_building.apartments.map do |single_apartment|
       single_apartment.is_available
     end
+<<<<<<< HEAD
 
     is_there_an_available_apartment = is_available_values.include?(true)
 
+=======
+    # Then within that is_available_values array, ask - "does it include 'true'?"
+    # Now you have an array of that apartments that return 'true' attribute for 'is_available'
+    is_there_an_available_apartment = is_available_values.include?(true)
+    # So if in that array that returned 'true', puts the index 
+>>>>>>> 34d1582411f3ac767ace16c90ac7989887718acd
     if is_there_an_available_apartment
       puts "#{all_buildings.index(single_building)}: #{single_building}"
     end
@@ -116,6 +123,9 @@ end
 
 
 
+<<<<<<< HEAD
 require_relative "rental_app/application"
 
 RentalApp::Application.new.start
+=======
+>>>>>>> 34d1582411f3ac767ace16c90ac7989887718acd
