@@ -13,8 +13,18 @@ module HappiTrails
 			Client.new("Jonah Spencer", 3, 35, 2),
 			Client.new("Katie Smith", 2, 30, 5)
 			]
-			display_all_animals(@animals)
+
+			@shelter = [
+			@animals, @clients	
+			]
+
+			# display_all_animals(@animals)
+			
+			# add_new_animals(@animals)
+			
 			display_all_clients(@clients)
+
+			add_new_clients(@clients)
 		end
 
 		def display_all_animals(animal_array)
@@ -29,6 +39,27 @@ module HappiTrails
 				puts "#{client}"
 			end
 		end
+
+
+		def add_new_animals(animal_array)
+			extra_animal = Animal.new("Murph", 15, "Male", "Hyena", "Leg of ham, Ice block")
+			@animals = animal_array << extra_animal
+			@animals.each do |animal|
+				puts "#{animal}"
+			end
+
+		end
+
+		def add_new_clients(client_array)
+			extra_client = Client.new("Jared Leto", 1, 40, 2)
+			@clients = client_array << extra_client
+			@clients.each do |client|
+				puts "#{client}"
+			end
+
+		end
+
+
 	
 
 
