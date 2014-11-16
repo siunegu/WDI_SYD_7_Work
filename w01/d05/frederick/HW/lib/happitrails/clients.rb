@@ -9,6 +9,7 @@ module HappiTrails
 			self.number_of_children = number_of_children
 			self.age = age
 			self.number_of_pets = number_of_pets
+			# self.adopted_animals = adopted_animals
 		end
 
 		def to_s
@@ -17,6 +18,7 @@ module HappiTrails
 			"	Number of children: #{number_of_children}\n" +
 			"	Age: #{age}\n" +
 			"	Number of pets: #{number_of_pets}\n" +
+			# "	Adopted animals: #{adopted_animals}\n" +
 			"\n"
 		end
 	end
