@@ -1,5 +1,12 @@
 require 'pry'
+<<<<<<< HEAD
 require_relative "animal"
+=======
+
+require_relative "animal"
+require_relative "client"
+
+>>>>>>> fd3dcc471c7ff032c8b3208c2250771f0be65b2e
 
 class Menu
 
@@ -12,11 +19,22 @@ class Menu
     puts "Please choose an option\n"
     puts "\n1. Add a new animal"
     puts "\n2. Add a new client"
+<<<<<<< HEAD
+=======
+    puts "\n=============================="
+    puts "\n3. Display all animals"
+    puts "\n4. Display all clients"
+    puts "\n=============================="
+    puts "\n5. Organise animal adoption"
+    puts "\n6. Accept a new animal"
+    puts "\n=============================="
+>>>>>>> fd3dcc471c7ff032c8b3208c2250771f0be65b2e
 
     option = gets.strip.to_i
 
     case option
     when 1
+<<<<<<< HEAD
       puts "Please provide details of the animal:"
       puts "Name:"
       name = gets.strip.to_s.capitalize
@@ -41,6 +59,31 @@ class Menu
       puts "option 2"
     else
       puts "no choice"
+=======
+      Animal.create
+
+    when 2
+      Client.create
+
+    when 3
+      Shelter.animal_display
+      gets
+      Menu.new
+
+    when 4
+      Shelter.client_display
+      gets
+      Menu.new
+
+    when 5
+      Animal.adopt
+
+    when 6
+      Client.donate
+
+    else
+      Menu.new
+>>>>>>> fd3dcc471c7ff032c8b3208c2250771f0be65b2e
     end
 
 
