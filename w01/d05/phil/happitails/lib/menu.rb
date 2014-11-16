@@ -1,5 +1,8 @@
 require 'pry'
+
 require_relative "animal"
+require_relative "client"
+
 
 class Menu
 
@@ -12,35 +15,41 @@ class Menu
     puts "Please choose an option\n"
     puts "\n1. Add a new animal"
     puts "\n2. Add a new client"
+    puts "\n=============================="
+    puts "\n3. Display all animals"
+    puts "\n4. Display all clients"
+    puts "\n=============================="
+    puts "\n5. Organise animal adoption"
+    puts "\n6. Accept a new animal"
+    puts "\n=============================="
 
     option = gets.strip.to_i
 
     case option
     when 1
-      puts "Please provide details of the animal:"
-      puts "Name:"
-      name = gets.strip.to_s.capitalize
-      puts "Age"
-      age = gets.strip.to_i
-      puts "Gender: (M or F)"
-      gender = ""
-      # until gender == "M" || gender == "F"
-      gets.strip.to_s.upcase
-      # end
-      puts "Species:"
-      species = gets.strip.to_s.capitalize
-      puts "Please list #{name}'s toys"
-      puts "First toy: "
-      toys = gets.strip.to_s
-      Animal.new(name,age,gender,species,toys)
-
-
+      Animal.create
 
     when 2
-      # Client.new
-      puts "option 2"
+      Client.create
+
+    when 3
+      Shelter.animal_display
+      gets
+      Menu.new
+
+    when 4
+      Shelter.client_display
+      gets
+      Menu.new
+
+    when 5
+      Animal.adopt
+
+    when 6
+      Client.donate
+
     else
-      puts "no choice"
+      Menu.new
     end
 
 
