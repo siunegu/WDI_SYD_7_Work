@@ -19,12 +19,29 @@ module HappiTrails
 			]
 
 			# display_all_animals(@animals)
-			
-			# add_new_animals(@animals)
-			
-			display_all_clients(@clients)
+			print "(AA)Add new animal, (AC)Add new client, 
+			(Q)Quit: "	
 
-			add_new_clients(@clients)
+
+			response = gets.chomp.downcase
+
+
+			while response != "q"
+				case response
+					when "aa"
+						add_new_animals(@animals)
+					when "ac"
+						add_new_clients(@clients)
+					else
+						puts "Please type a valid response"	
+				end
+				response = gets.chomp.downcase
+			end
+
+			
+			# display_all_clients(@clients)
+
+			# add_new_clients(@clients)
 		end
 
 		def display_all_animals(animal_array)
@@ -42,21 +59,43 @@ module HappiTrails
 
 
 		def add_new_animals(animal_array)
-			extra_animal = Animal.new("Murph", 15, "Male", "Hyena", "Leg of ham, Ice block")
+			print "What is the name of your pet?"
+			name = gets.chomp
+			print "What is the age of your pet?"
+			age = gets.chomp
+			print "What is the gender of your pet?"
+			gender = gets.chomp
+			print "What is the species of your pet?"
+			species = gets.chomp
+			print "What are some of your pet's toys?"
+			toys = gets.chomp
+
+			extra_animal = Animal.new(name, age, gender, species, toys)
 			@animals = animal_array << extra_animal
 			@animals.each do |animal|
 				puts "#{animal}"
 			end
-
+			print "(AA)Add new animal, (AC)Add new client, 
+			(Q)Quit: "	
 		end
 
 		def add_new_clients(client_array)
-			extra_client = Client.new("Jared Leto", 1, 40, 2)
+			print "What is the name of your client?"
+			name = gets.chomp
+			print "How many children does your client have?"
+			number_of_children = gets.chomp
+			print "What is the age of your client?"
+			age = gets.chomp
+			print "How many pets does your client already have?"
+			number_of_pets = gets.chomp
+
+			extra_client = Client.new(name, number_of_children, age, number_of_pets)
 			@clients = client_array << extra_client
 			@clients.each do |client|
 				puts "#{client}"
 			end
-
+			print "(AA)Add new animal, (AC)Add new client, 
+			(Q)Quit: "	
 		end
 
 
