@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Goudy Bookletter 1911", serif;
+}
+html {
+  max-width: 100%;
+}
+body {
+  background-color: #000;
+}
+
+.banner h1 {
+/*  padding: 1.5em ; */
+  font-family: 'Amatic SC', cursive;
+  color: #f00;
+  font-size: 15em ;
+  font-style: italic;
+  text-align: center;  
+}
+
+.banner {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  background: url("http://www.theblaze.com/wp-content/uploads/2013/06/adolf_hitler.jpg");
+  background-position: 0 30%;
+  background-size: cover;
+  background-color: #000;
+  background-repeat: no-repeat;
+} 
+

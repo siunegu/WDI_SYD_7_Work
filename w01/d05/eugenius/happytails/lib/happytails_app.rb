@@ -6,8 +6,8 @@ module HappyTails
 
 		def start
 		@animal_database = [
-			 	Animal.new("doge", 2, "male", "dog", "wow such"),
-			 	Animal.new("nyan", 2, "female", "cat", "rainbow")
+			 	pet01 = Animal.new("doge", 2, "male", "dog", "wow such"),
+			 	pet02 = Animal.new("nyan", 2, "female", "cat", "rainbow")
 		]
 		@client_database = [
 				Clients.new("max", 2, 32, 2),
@@ -61,7 +61,6 @@ module HappyTails
 			new_toys = gets.chomp.to_s
 			@new_animal_entry = Animal.new(new_name, new_age, new_gender, new_species, new_toys)
 			@animal_database << @new_animal_entry		
-			binding.pry	
 			menu	
 		end
 
@@ -137,7 +136,6 @@ module HappyTails
 			adopting = @animal_database.select { |x| x.name == adopt_response }
 			active_client = @client_database.select { |x| x.client_name == @client_response }
 			active_client << adopting
-			binding.pry
 			# @animal_database.delete(adopting) #gets rid of it from the db
 			# puts adopting
 			# animal_adopt_name_values = @animal_database.map do |x| 

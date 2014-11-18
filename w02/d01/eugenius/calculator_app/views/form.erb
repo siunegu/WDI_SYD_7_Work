@@ -1,0 +1,19 @@
+<form action="/calculate" method="get">
+	 <h1>Number Cruncher 2.0</h1>
+	 <p>
+    <input type="number" name="number_1">
+  </p>
+	 <p>
+		<select name="operator">
+			<option value="Add">Add</option>
+			<option value="Subtract">Subtract</option>
+			<option value="Multiply">Multiply</option>
+			<option value="Divide">Divide</option>			
+		</select>
+  </p>   
+	 <p>
+    <input type="number" name="number_2">
+  </p>
+  <button name="calculate" type="submit">Crunch it!</button>
+	<output type="number" name="answer"><%= @answer %></output>
+</form>

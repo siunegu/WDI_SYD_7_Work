@@ -20,9 +20,7 @@ module HappyTails
 		    "  Name: #{client_name}\n" +
 		    "  Age: #{client_age}\n" +
 		    "  Number of Children: #{num_children}\n" +
-		    "  Pets: #{pet1}\n" +
-		    "				 #{pet2}\n" +
-		    "				 #{pet3}\n" 			    				
+		    "  Pets: " + pet1 			    				
 			end
 
 				
