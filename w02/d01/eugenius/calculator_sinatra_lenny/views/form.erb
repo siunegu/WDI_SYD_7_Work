@@ -1,0 +1,29 @@
+<form action="/calc" method="get">
+  
+  <h1>Lenny's Online Calculator</h1>
+
+  <p>
+    <label for="number_1">First Number: </label>
+    <input type="number" name="number_1" id="number_1">
+  </p>
+  <p>
+    <select name="operator">
+      <option value="Add">Sum</option>
+      <option value="Subtract">Subtract</option>
+      <option value="Multiply">Multiply</option>
+      <option value="Divide">Divide</option>
+    </select>
+  </p>
+  <p>
+    <label for="number_2">Second Number: </label>
+    <input type="number" name="number_2" id="number_2">
+  </p>
+  
+  <button name="calculate" type="submit">Calculate</button>
+
+  <br>
+  <br>
+  <br>
+  <output name="answer"><%= "The answer is #{@answer}" %></output> 
+
+</form>
