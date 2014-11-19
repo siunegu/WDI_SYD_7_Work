@@ -23,7 +23,7 @@ header {
 header img.logo {
   display:inline-block;
   padding-left: 25px;
-  width: 200px;  
+  width: 100px;  
 }
 
 header h1 {
@@ -119,7 +119,7 @@ form {
 form.contact {
 /*  Flat UI forms*/
   display: block;
-  padding: 0.4em 0.8em;  
+  padding: 0.4em 10em;  
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -129,24 +129,38 @@ form.contact {
 
 form input {
   border: 1px solid rgba(180, 180, 180, 0.4);
-  background-color: rgba(200, 200, 200, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 2.5em 5em;
+  -webkit-transition: 0.4s ease-in-out;  
+}
+
+form input:hover {
+  border: 1px solid red;
+  background-color: rgba(255, 255, 255, 0.1);  
+}
+
+form input:active {
+  border: 1px solid red;
+  background-color: red;  
 }
 
 form button {
   display: block;
   margin: 0.8em auto;
-  padding: 0.4em 1.8em;
+  padding: 0.6em 5em;
+  font-family: 'Libre Baskerville', serif;   
   font-weight: bold;
+  font-style: italic;
   font-size: 1.2em;
-  text-transform: uppercase;
+  letter-spacing: -0.05em;
   color: #fff;
   text-decoration: none;   
   background: red;
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 5px solid #ff3400;
+  border-bottom: 5px solid #ff3500;
+  line-height: 1.2em;
   -webkit-transition: 0.4s ease-in-out;
 }
 
@@ -162,4 +176,9 @@ form .description {
 ::-webkit-input-placeholder {
    color: rgba(200, 200, 200, 1.0);
    text-align: center;
+}
+
+.thank_you {
+  text-align: center;
+  margin: 0 auto;
 }
