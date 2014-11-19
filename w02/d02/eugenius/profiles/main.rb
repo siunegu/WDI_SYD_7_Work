@@ -8,7 +8,13 @@ end
 get '/contact' do
 	@email = params[:email]
 	@your_name = params[:your_name]
+	@description = params[:description]
+	
 	erb :contact, layout: :layout
+end
+
+get '/thank_you' do
+	erb :thank_you, layout: :layout
 end
 
 get '/about' do
