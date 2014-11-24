@@ -1,0 +1,177 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;	
+	-webkit-box-sizing: border-box;	
+	-o-box-sizing: border-box;	
+	-ms-box-sizing: border-box;	
+}
+
+.clearfix {
+	clear: both;
+}
+
+html {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+h4 {
+	text-align: center;		
+	font-size: 14px;
+	color: gray;
+}
+
+h3 {
+	color: gray;
+	padding: 1.2em 0;
+	margin: 0;
+}
+
+p {
+	margin: 0 0 15px;
+	font-size: 18px;
+	line-height: 1.72222;	
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	color: #34495e;
+}
+
+section a {
+	text-decoration: none;
+	color: #34495e;
+}
+
+section a:hover {
+	color: #e74c3c;
+}
+
+.movie-list {
+	width: 420px;
+	margin: 0 auto;
+}
+
+.movie-entry {
+	padding: 20px;
+}
+
+.movie-entry-left {
+	float: left;
+	width: 40%;
+}
+
+.movie-entry-left h2 {
+	color: #34495e;
+}
+
+.movie-entry-right {
+	float: right;
+	width: 60%;
+	padding: 80px 10px;	
+}
+
+#main {
+	margin: 6% auto;
+	width: 800px;
+	border-radius: 12px;
+	box-shadow: 2px solid #FAFAFA;
+}
+
+#main a {
+	line-height: 2em;
+	color: white;
+	padding: 6px 10px;
+	font-size: 17px;
+	border-radius: 18px;	
+	background-color: #34495e;
+	border: none;	
+	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+#main a:hover {
+	background-color: #e74c3c;	
+}
+
+
+#main h1 {
+	text-align: center;		
+	color: #34495e;
+	margin: 10px 0;
+	font: 400 58px/68px 'Lobster', cursive;
+/*	font: 900 50px/60px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	letter-spacing: -1px;
+}
+
+#main img {
+	border-radius: 6px;
+	margin: 0 auto;
+}
+
+#main form {
+	text-align: center;		
+	padding: 20px;
+	margin: 10px;
+}
+
+#main form .form-control {
+	padding: 8px 12px;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.467;
+	color: #2ecc71;
+	border: 2px solid #bdc3c7;
+	border-radius: 6px;
+	box-shadow: none;
+-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+#main form .form-control:hover {
+	border: 2px solid #2ecc71;	
+}
+
+#main form .button {
+	color: white;
+	padding: 8px 19px;
+	font-size: 17px;
+	line-height: 1.471;
+	border-radius: 6px;	
+	background-color: #1abc9c;
+	border: none;
+	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+#main form .button:hover {
+ background-color: #2ecc71;
+}	
+
+.rating {
+	padding-left: 40px;
+}
+
+.rating img {
+	width: 15px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+	height: 80px;
+	width: 100%;
+}
+
+footer p {
+	padding: 1.5em 0;
+	font-size: 13px;
+	color: #bdc3c7;
+	font-style: italic;
+}

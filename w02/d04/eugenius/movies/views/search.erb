@@ -1,0 +1,20 @@
+<h1>Movie.s</h1>
+<h4>Search Your Fav Movies</h4>
+
+
+<form action="/search" method="GET">
+	<input class="form-control" type="text" name="q" placeholder="Search Movies">
+	<input class="button" type="submit" value="Lookup Movie">
+</form>
+
+<section class="movie-list">
+<ul>
+<!-- Were there any movies? -->
+<% if @movie_list %> 
+	<% @movie_list.each do |movie| %>
+		 <li><a href="/movies/<%= movie["imdbID"].gsub(" ", "+") %>">
+		 <%= movie["Title"] %></a></li>
+	<% end %>
+<% end %>
+</ul>
+</section>

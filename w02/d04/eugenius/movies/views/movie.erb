@@ -1,0 +1,53 @@
+<h1>Movie.s</h1>
+<h4>Search Your Fav Movies</h4>
+<form action="/search" method="GET">
+	<input class="form-control" type="text" name="q" placeholder="Search Movies">
+	<input class="button" type="submit" value="Lookup Movie">
+</form>
+
+<section class="movie-entry">
+<% if @movie %>
+	<article class="movie-entry-left">
+	<h2><%= @movie["Title"] %></h2>
+	<img src="<%= @movie["Poster"] %>">	
+	</article>
+	<article class="movie-entry-right">
+	<ul>
+		<li>Year: <%= @movie["Year"] %></li>
+		<li>Rated: <%= @movie["Rated"] %></li>	
+		<li>Released: <%= @movie["Released"] %></li>
+		<li>Runtime: <%= @movie["Runtime"] %></li>
+		<li>Genre: <%= @movie["Genre"] %></li>
+		<li>Director: <%= @movie["Director"] %></li>
+		<li>Writer: <%= @movie["Writer"] %></li>
+		<li>Actors: <%= @movie["Actors"] %></li>
+		<li>Plots: <%= @movie["Plot"] %></li>
+		<li>Language: <%= @movie["Language"] %></li>
+		<li>Country: <%= @movie["Country"] %></li>
+		<li>Awards: <%= @movie["Awards"] %></li>
+		<li>Metascore: <%= @movie["Metascore"] %></li>
+		<li>IMDB Rating: <%= @movie["imdbRating"] %></li>
+		<li>IMDB Votes: <%= @movie["imdbVotes"] %></li>
+		<li>IMDB ID: <%= @movie["imdbID"] %></li>
+	</ul>
+	<div class="rating">
+		<h3 style="text-align: left;">Rating:</h3>
+		<% @movie["imdbRating"].to_i.times do %>
+			<img src="/star178.png">
+		<% end %>
+	</div>
+	<ul style="display: inline-block; padding-top: 10px;">
+	<h3 style="text-align: left;">Related Movies:</h3>	
+	<!-- Were there any movies? -->
+		<% if @movie_list %> 
+			<% @movie_list["Search"].each do |movie| %>
+				 <li><a href="/movies/<%= movie["imdbID"] %>"	>
+				 <%= movie["Title"] %></a></li>
+				<% end %>
+			<% end %>
+		<% end %>
+	</ul>
+	</article>
+</section>
+
+<div class="clearfix"></div>

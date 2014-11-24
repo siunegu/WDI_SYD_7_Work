@@ -1,0 +1,5 @@
+Number of KMs: 1000
+Door type: Gull
+Sun Roof: Yes
+Engine: Potato
+Asking Price: 0
