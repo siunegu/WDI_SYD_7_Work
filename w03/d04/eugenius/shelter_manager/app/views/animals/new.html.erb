@@ -1,0 +1,32 @@
+<%= form_for @animal do |f| %>
+<p>
+	<%= f.label :name %><br>
+	<%= f.text_field :name, placeholder: "Sparky" %>	
+</p>
+<p>
+	<%= f.label :species %><br>
+	<%= f.text_field :species %>
+</p>
+<p>
+	<%= f.label :breed %><br>
+	<%= f.text_field :breed %>
+</p>
+<p>
+	<%= f.label :sex %><br>
+	<%= f.text_field :sex %>
+</p>
+<p>
+	<%= f.label :age %><br>
+	<%= f.date_field :age %>
+</p>
+<p>
+	<%= f.label :arrival_time %><br>
+	<%= f.date_field :arrival_time %>
+</p>
+<p>
+	<%= f.label :departure_time %><br>
+	<%= f.date_field :departure_time %>
+</p>
+
+	<%= f.submit %>
+<% end %>
