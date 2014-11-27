@@ -1,0 +1,10 @@
+<ul>
+	<% @posts.each do |post| %>
+	<li>
+		<%= post["title"] %>
+		<%= post["date"] %>
+		<%= post["author_first_name"] + " " + post["author_last_name"]  %>		
+	</li>
+	<% end %>	
+</ul>
+
