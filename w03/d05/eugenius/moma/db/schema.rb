@@ -11,14 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127224841) do
+ActiveRecord::Schema.define(version: 20141128002520) do
 
   create_table "artists", force: true do |t|
-    t.string   "name"
+    t.string   "first_name"
     t.string   "nationality"
     t.string   "period"
     t.text     "image"
-    t.date     "dob"
+    t.date     "date_of_birth"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "last_name"
+  end
+
+  create_table "paintings", force: true do |t|
+    t.string   "title"
+    t.string   "year"
+    t.string   "medium"
+    t.string   "style"
+    t.text     "image"
+    t.integer  "artist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
