@@ -1,0 +1,9 @@
+<h2><%= @painting.title %></h2>
+<h3><%= @painting.year %></h3>
+<h3><%= @painting.medium %></h3>
+<h3><%= @painting.style %></h3>
+<img src="<%= @painting.image %>" alt="image">
+
+<p>
+<%= link_to 'Back to Paintings', paintings_path %>
+</p>

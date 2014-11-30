@@ -1,6 +1,19 @@
-<h1><%= @artist.first_name + ' ' + @artist.last_name %></h1>
+<h2><%= @artist.first_name + ' ' + @artist.last_name %></h2>
 <h3><%= @artist.nationality %></h3>
 <h3><%= @artist.period %></h3>
-<h4><%= @artist.date_of_birth %></h4>
+<h3><%= @artist.date_of_birth %></h3>
 
+<p>
+	<% @paintings.each do |painting| %>
+	<ul>
+		<li>
+			<%= link_to painting.title, painting %>
+			<img src="<%= painting.image %>">
+		</li>
+	</ul>		   
+  <% end %>	
+</p>
+
+<p>
 <%= link_to 'Back to Artists', artists_path %>
+</p>

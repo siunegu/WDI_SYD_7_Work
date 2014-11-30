@@ -31,10 +31,4 @@ davida.paintings.create({
 	image: "http://c300221.r21.cf1.rackcdn.com/davida-allen-1951-australia-the-rude-painting-or-michael-and-me-oil-on-canvas-1645-x-2505-cm-1383896094_org.jpg"
 	})
 
-davida.paintings.create({
-	title: "Amet",
-	year: "1970",
-	medium: "Oil on board",
-	style: "Cubist",
-	image: "http://c300221.r21.cf1.rackcdn.com/davida-allen-1951-australia-the-rude-painting-or-michael-and-me-oil-on-canvas-1645-x-2505-cm-1383896094_org.jpg"
-	})
+

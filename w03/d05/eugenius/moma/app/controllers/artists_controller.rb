@@ -10,6 +10,7 @@ class ArtistsController < ApplicationController
 
 	def show
 		@artist = Artist.find(params[:id])
+    @paintings = Painting.where(artist_id: @artist)		
 	end
 
 	def create 
@@ -25,6 +26,9 @@ class ArtistsController < ApplicationController
 		@artist = Artist.find(params[:id])
 		@artist.update(artist_params)
 		redirect_to @artist
+	end
+
+	def destroy
 	end
 
 	private

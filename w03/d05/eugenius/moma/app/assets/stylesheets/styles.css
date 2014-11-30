@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento);
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+html {
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 3.6em;
+	letter-spacing: -0.01em;
+}
+
+h2 {
+	font-weight: 700;
+}
+
+h3 {
+	font-family: 'Quattrocento', serif;			
+	font-weight: 300;
+}
+
+p {
+	text-align: left;
+}
+
+ul, li {
+	list-style-type: none;
+  line-height: 1.5em;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: red;	
+}
+
+.logo a {
+	color: black;
+}
+
+header {
+	 margin-bottom: 50px;	
+	 width: 940px;
+	 margin: 0 auto;
+	 padding: 20px;
+}
+
+#main {
+	width: 940px;
+ 	margin: 0 auto;
+ 	padding: 20px;
+}
